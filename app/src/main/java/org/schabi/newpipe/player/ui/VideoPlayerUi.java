@@ -1075,6 +1075,7 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
 
             buildPlaybackSpeedMenu();
             binding.playbackSpeed.setVisibility(View.VISIBLE);
+            binding.surfaceView.setVisibility(View.GONE);
         });
     }
     //endregion
