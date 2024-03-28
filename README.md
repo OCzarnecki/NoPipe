@@ -1,3 +1,25 @@
+# NewPipe but without the video part
+
+This abomination of a project took the beautiful codebase of NewPipe and hacked it to stop it from playing video. That's it.
+
+Why? Because I want to listen to music on youtube but if I had a youtube app on my phone I'd be an incredible time sink.
+
+I'll be rebasing this repo whenever NewPipe breaks for me.
+
+All credit for this project should of course go to the NewPipe team, I literally added one line of code (which make it worse).
+
+## How to build
+
+Run
+
+```
+gradle installDebug
+```
+
+This will create an apk at `./app/build/outputs/apk/debug/app-debug.apk` which you can copy to your phone and install.
+
+---
+
 <h3 align="center">We are planning to <i>rewrite</i> large chunks of the codebase, to bring about <a href="https://github.com/TeamNewPipe/NewPipe/discussions/10118">a new, modern and stable NewPipe</a>!</h3>
 <h4 align="center">Please do <b>not</b> open pull requests for <i>new features</i> now, only bugfix PRs will be accepted.</h4>
 
