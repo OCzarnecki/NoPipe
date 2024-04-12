@@ -163,12 +163,14 @@ public final class TextEllipsizer {
     private void linkifyContentView(final Consumer<View> consumer) {
         final boolean oldState = isEllipsized;
         disposable.clear();
-        TextLinkifier.fromDescription(view, content,
-                HtmlCompat.FROM_HTML_MODE_LEGACY, streamingService, streamUrl, disposable,
-                v -> {
-                    consumer.accept(v);
-                    notifyStateChangeListener(oldState);
-                });
+        if (content != null) {
+            TextLinkifier.fromDescription(view, content,
+                    HtmlCompat.FROM_HTML_MODE_LEGACY, streamingService, streamUrl, disposable,
+                    v -> {
+                        consumer.accept(v);
+                        notifyStateChangeListener(oldState);
+                    });
+        }
 
     }
 
